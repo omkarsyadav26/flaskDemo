@@ -2,7 +2,7 @@
 {% block content %}
 
     <h1>
-        Hello World!!
+        Hello {{name}}!!
     </h1>
 
     {% for post in posts %}
@@ -10,5 +10,5 @@
     <p>by {{post.author}} on {{post.posted_date}}</p>
     <p>{{post.content}}</p>
     {% endfor %}
-
+    <a href="{{url_for('about')}}">about page</a>
 {% endblock content %}
